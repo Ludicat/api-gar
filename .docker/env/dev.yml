@@ -1,0 +1,27 @@
+version: '2.2'
+
+services:
+    api_gar_php-cli:
+        container_name: api_gar_php-cli
+        build:
+            context: ../php-cli-${PHP_VERSION}
+            args:
+                GITHUB_TOKEN: ${GITHUB_TOKEN}
+        restart: "no"
+        tty: true
+        volumes:
+            - "../../:/var/www/html:delegated"
+            - "~/.ssh:/home/docker/.ssh:ro"
+        labels:
+            - "traefik.enable=false"
+        networks:
+            - "internal"
+        environment:
+            TZ: 'Europe/Paris'
+            ENVIRONMENT: "dev"
+            APP_ENV: "dev"
+            APP_DEBUG: "true"
+
+networks:
+    internal:
+        driver: bridge

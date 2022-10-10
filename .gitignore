@@ -1,0 +1,5 @@
+.docker-config
+.env.local
+
+/temp/
+/vendor/
