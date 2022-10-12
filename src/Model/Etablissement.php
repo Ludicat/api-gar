@@ -117,7 +117,7 @@ class Etablissement
     protected $localite_acheminement_uai;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Identifiant de l’ENT auquel est rattaché l’établissement encodé en base 64
      */
@@ -424,19 +424,19 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getIdENT(): string
+    public function getIdENT(): ?string
     {
         return $this->idENT;
     }
 
     /**
-     * @param string $idENT
+     * @param string|null $idENT
      *
      * @return $this
      */
-    public function setIdENT(string $idENT): Etablissement
+    public function setIdENT(?string $idENT): Etablissement
     {
         $this->idENT = $idENT;
 
