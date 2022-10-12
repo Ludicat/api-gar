@@ -22,6 +22,7 @@ class AbonnementTest extends TestCase
         parent::setUp();
         
         $this->abonnement = new Abonnement();
+        $this->abonnement->setPublicCible([]);
     }
     
     public function testGetSetPublicCible()

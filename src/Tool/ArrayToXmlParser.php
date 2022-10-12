@@ -53,8 +53,10 @@ XML
         foreach ($value as $subKey => $subValue) {
             // Recursive
             if (is_array($subValue)) {
-                $subXml  = $xml->addChild($key);
+                $subXml = $xml->addChild($key);
                 static::addChild($subXml, $subValue, $subKey);
+            } elseif (is_numeric($subKey)) {
+                $xml->addChild($key, $subValue);
             } else {
                 $xml->addChild($subKey, $subValue);
             }

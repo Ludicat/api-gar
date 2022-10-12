@@ -105,3 +105,9 @@ Fetch all Etablissement
 
     // A list of Etablissement objects
     $result = $client->getEtablissements();
+
+Run tests
+=========
+
+    make tests
+
