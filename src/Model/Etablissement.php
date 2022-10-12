@@ -12,105 +12,105 @@ namespace Ludicat\ApiGar\Model;
 class Etablissement
 {
     /**
-     * @var string
+     * @var string|null
      * 
      * unité administrative immatriculée. Identifiant de l’établissement
      */
     protected $uai;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Nature codifiée de l’établissement
      */
     protected $nature_uai;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Nature de l’établissement au format texte
      */
     protected $nature_uai_libe;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Type codifié de l’établissement
      */
     protected $type_uai;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Type de l’établissement au format texte
      */
     protected $type_uai_libe;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Code postal de la commune de l’établissement
      */
     protected $commune;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Dénomination de la commune de l’établissement
      */
     protected $commune_libe;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Identifiant de l’académie
      */
     protected $academie;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Dénomination de l’académie
      */
     protected $academie_libe;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Numéro du département
      */
     protected $departement_insee_3;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Dénomination du département
      */
     protected $departement_insee_3_libe;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Dénomination de l’établissement
      */
     protected $appellation_officielle;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Patronyme de l’établissement
      */
     protected $patronyme_uai;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Code postal de la commune d’acheminement postale de l’établissement
      */
     protected $code_postal_uai;
 
     /**
-     * @var string
+     * @var string|null
      * 
      * Commune d’acheminement postale de l’établissement
      */
@@ -124,9 +124,9 @@ class Etablissement
     protected $idENT;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getUai(): string
+    public function getUai(): ?string
     {
         return $this->uai;
     }
@@ -136,7 +136,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setUai(string $uai): Etablissement
+    public function setUai(?string $uai): Etablissement
     {
         $this->uai = $uai;
 
@@ -144,9 +144,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getNatureUai(): string
+    public function getNatureUai(): ?string
     {
         return $this->nature_uai;
     }
@@ -156,7 +156,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setNatureUai(string $nature_uai): Etablissement
+    public function setNatureUai(?string $nature_uai): Etablissement
     {
         $this->nature_uai = $nature_uai;
 
@@ -164,9 +164,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getNatureUaiLibe(): string
+    public function getNatureUaiLibe(): ?string
     {
         return $this->nature_uai_libe;
     }
@@ -176,7 +176,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setNatureUaiLibe(string $nature_uai_libe): Etablissement
+    public function setNatureUaiLibe(?string $nature_uai_libe): Etablissement
     {
         $this->nature_uai_libe = $nature_uai_libe;
 
@@ -184,9 +184,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTypeUai(): string
+    public function getTypeUai(): ?string
     {
         return $this->type_uai;
     }
@@ -196,7 +196,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setTypeUai(string $type_uai): Etablissement
+    public function setTypeUai(?string $type_uai): Etablissement
     {
         $this->type_uai = $type_uai;
 
@@ -204,9 +204,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTypeUaiLibe(): string
+    public function getTypeUaiLibe(): ?string
     {
         return $this->type_uai_libe;
     }
@@ -216,7 +216,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setTypeUaiLibe(string $type_uai_libe): Etablissement
+    public function setTypeUaiLibe(?string $type_uai_libe): Etablissement
     {
         $this->type_uai_libe = $type_uai_libe;
 
@@ -224,9 +224,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCommune(): string
+    public function getCommune(): ?string
     {
         return $this->commune;
     }
@@ -236,7 +236,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setCommune(string $commune): Etablissement
+    public function setCommune(?string $commune): Etablissement
     {
         $this->commune = $commune;
 
@@ -244,9 +244,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCommuneLibe(): string
+    public function getCommuneLibe(): ?string
     {
         return $this->commune_libe;
     }
@@ -256,7 +256,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setCommuneLibe(string $commune_libe): Etablissement
+    public function setCommuneLibe(?string $commune_libe): Etablissement
     {
         $this->commune_libe = $commune_libe;
 
@@ -264,9 +264,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getAcademie(): string
+    public function getAcademie(): ?string
     {
         return $this->academie;
     }
@@ -276,7 +276,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setAcademie(string $academie): Etablissement
+    public function setAcademie(?string $academie): Etablissement
     {
         $this->academie = $academie;
 
@@ -284,9 +284,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getAcademieLibe(): string
+    public function getAcademieLibe(): ?string
     {
         return $this->academie_libe;
     }
@@ -296,7 +296,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setAcademieLibe(string $academie_libe): Etablissement
+    public function setAcademieLibe(?string $academie_libe): Etablissement
     {
         $this->academie_libe = $academie_libe;
 
@@ -304,9 +304,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDepartementInsee3(): string
+    public function getDepartementInsee3(): ?string
     {
         return $this->departement_insee_3;
     }
@@ -316,7 +316,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setDepartementInsee3(string $departement_insee_3): Etablissement
+    public function setDepartementInsee3(?string $departement_insee_3): Etablissement
     {
         $this->departement_insee_3 = $departement_insee_3;
 
@@ -324,9 +324,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDepartementInsee3Libe(): string
+    public function getDepartementInsee3Libe(): ?string
     {
         return $this->departement_insee_3_libe;
     }
@@ -336,7 +336,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setDepartementInsee3Libe(string $departement_insee_3_libe): Etablissement
+    public function setDepartementInsee3Libe(?string $departement_insee_3_libe): Etablissement
     {
         $this->departement_insee_3_libe = $departement_insee_3_libe;
 
@@ -344,9 +344,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getAppellationOfficielle(): string
+    public function getAppellationOfficielle(): ?string
     {
         return $this->appellation_officielle;
     }
@@ -356,7 +356,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setAppellationOfficielle(string $appellation_officielle): Etablissement
+    public function setAppellationOfficielle(?string $appellation_officielle): Etablissement
     {
         $this->appellation_officielle = $appellation_officielle;
 
@@ -364,9 +364,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPatronymeUai(): string
+    public function getPatronymeUai(): ?string
     {
         return $this->patronyme_uai;
     }
@@ -376,7 +376,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setPatronymeUai(string $patronyme_uai): Etablissement
+    public function setPatronymeUai(?string $patronyme_uai): Etablissement
     {
         $this->patronyme_uai = $patronyme_uai;
 
@@ -384,9 +384,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCodePostalUai(): string
+    public function getCodePostalUai(): ?string
     {
         return $this->code_postal_uai;
     }
@@ -396,7 +396,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setCodePostalUai(string $code_postal_uai): Etablissement
+    public function setCodePostalUai(?string $code_postal_uai): Etablissement
     {
         $this->code_postal_uai = $code_postal_uai;
 
@@ -404,9 +404,9 @@ class Etablissement
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getLocaliteAcheminementUai(): string
+    public function getLocaliteAcheminementUai(): ?string
     {
         return $this->localite_acheminement_uai;
     }
@@ -416,7 +416,7 @@ class Etablissement
      *
      * @return $this
      */
-    public function setLocaliteAcheminementUai(string $localite_acheminement_uai): Etablissement
+    public function setLocaliteAcheminementUai(?string $localite_acheminement_uai): Etablissement
     {
         $this->localite_acheminement_uai = $localite_acheminement_uai;
 
@@ -424,7 +424,7 @@ class Etablissement
     }
 
     /**
-     * @return string|null
+     * @return string|null|null
      */
     public function getIdENT(): ?string
     {
