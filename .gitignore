@@ -2,4 +2,5 @@
 .env.local
 
 /temp/
+/tests/.phpunit.result.cache
 /vendor/
