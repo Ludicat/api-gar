@@ -35,7 +35,9 @@ First, create a client :
     $adapter = new \Ludicat\ApiGar\Adapter\GuzzleAdapter(
         __DIR__.'/config/cert/app.pem', // Pem key (certified by government)
         __DIR__.'/config/cert/app.key', // Private key
-        'Accordeon' // Private key pass
+        'Accordeon' // Private key pass,
+        Ludicat\ApiGar\Adapter\AbonnementWsInterface::ENDPOINT_DEV // Default one
+        // Ludicat\ApiGar\Adapter\AbonnementWsInterface::ENDPOINT_PROD // Once you're ready for production, please use this constant instead.
     );
     $client = new \Ludicat\ApiGar\Client($adapter, $serviceProvider);
     
