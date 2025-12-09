@@ -30,6 +30,9 @@ abstract class AbstractAbonnementWs implements AbonnementWsInterface
     protected $keyFilePath;
 
     /** @var string */
+    protected $haricaFilePath;
+
+    /** @var string */
     protected $keyPassword;
 
     /** @var string */
@@ -50,11 +53,13 @@ abstract class AbstractAbonnementWs implements AbonnementWsInterface
     public function __construct(
         string $pemFilePath,
         string $keyFilePath,
+        string $haricaFilePath,
         string $keyPassword = null,
         string $baseUrl = AbonnementWsInterface::ENDPOINT_DEV
     ) {
         $this->pemFilePath = $pemFilePath;
         $this->keyFilePath = $keyFilePath;
+        $this->haricaFilePath = $haricaFilePath;
         $this->keyPassword = $keyPassword;
         $this->baseUri = $baseUrl;
     }

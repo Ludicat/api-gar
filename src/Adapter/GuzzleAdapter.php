@@ -33,6 +33,7 @@ class GuzzleAdapter extends AbstractAbonnementWs
                     $this->keyFilePath,
                     $this->keyPassword
                 ],
+                RequestOptions::VERIFY => $this->haricaFilePath,
             ]);
         }
         
