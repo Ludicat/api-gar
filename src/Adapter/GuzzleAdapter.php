@@ -26,15 +26,20 @@ class GuzzleAdapter extends AbstractAbonnementWs
     protected function getClient()
     {
         if (!$this->client) {
-            $this->client = GuzzleClient::createWithConfig([
+            $config = [
                 'base_uri' => $this->getBaseUri(),
                 RequestOptions::CERT => $this->pemFilePath,
                 RequestOptions::SSL_KEY => [
                     $this->keyFilePath,
                     $this->keyPassword
                 ],
-                RequestOptions::VERIFY => $this->haricaFilePath,
-            ]);
+            ];
+            // Add verify if needed only
+            if ($this->haricaFilePath) {
+                $config[RequestOptions::VERIFY] = $this->haricaFilePath;
+            }
+
+            $this->client = GuzzleClient::createWithConfig($config);
         }
         
         return $this->client;

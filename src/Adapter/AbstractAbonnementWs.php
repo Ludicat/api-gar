@@ -53,7 +53,7 @@ abstract class AbstractAbonnementWs implements AbonnementWsInterface
     public function __construct(
         string $pemFilePath,
         string $keyFilePath,
-        string $haricaFilePath,
+        string $haricaFilePath = null,
         string $keyPassword = null,
         string $baseUrl = AbonnementWsInterface::ENDPOINT_DEV
     ) {
